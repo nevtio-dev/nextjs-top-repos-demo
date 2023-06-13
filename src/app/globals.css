@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: rgb(var(--foreground-rgb));
+}
+
+body {
+    background: rgb(var(--background-end-rgb)) url(/images/github-background.jpg) center center repeat-y;
+    backdrop-filter: brightness(5) contrast(0.125) saturate(10);
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url(/images/github-background.jpg);
+        backdrop-filter: brightness(2.5);
+    }
+}
